@@ -5,11 +5,9 @@ Home: https://github.com/asottile/astpretty
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astpretty-feedstock/blob/master/LICENSE.txt)
 
 Summary: Pretty print the output of python stdlib `ast.parse`.
-
-
 
 Current build status
 ====================
