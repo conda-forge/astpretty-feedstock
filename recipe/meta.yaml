@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b08c95f32e5994454ea99882ff3c4a0afc8254c38998a0ed4b479dba448dc581
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - astpretty = astpretty:main
@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - astpretty --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/asottile/astpretty
